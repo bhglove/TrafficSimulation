@@ -16,4 +16,7 @@ public class Lane {
         this.direction = direction;
     }
 
+    public int size() {
+        return queue.size();
+    }
 }
