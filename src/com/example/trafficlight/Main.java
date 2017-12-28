@@ -1,12 +1,7 @@
 package com.example.trafficlight;
 
-import com.example.trafficlight.enums.Direction;
-import com.example.trafficlight.enums.TrafficLightState;
-import com.example.trafficlight.interfaces.TrafficLight;
-import com.example.trafficlight.module.StraightLight;
-import com.example.trafficlight.module.TurnLight;
-
-import java.util.ArrayList;
+import com.example.trafficlight.vehicle.DirectionBuilder;
+import com.example.trafficlight.vehicle.Directions;
 
 public class Main {
 
@@ -32,7 +27,12 @@ public class Main {
 
         //TODO: Put the pieces together :shades:
 
+        DirectionBuilder builder = new DirectionBuilder(10);
+        Directions directions = builder.getDirections();
 
+        while (!directions.isEmpty()) {
+            System.out.println(directions.nextDirection().toString());
+        }
     }
 
 }
