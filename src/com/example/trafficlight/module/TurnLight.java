@@ -4,7 +4,7 @@ import com.example.trafficlight.enums.Direction;
 import com.example.trafficlight.enums.TrafficLightState;
 import com.example.trafficlight.interfaces.TrafficLight;
 
-public class TurnLight implements TrafficLight {
+class TurnLight implements TrafficLight {
     private Direction direction;
     private Direction turnLane;
     private TrafficLightState state = TrafficLightState.RED;
@@ -19,7 +19,7 @@ public class TurnLight implements TrafficLight {
         return direction;
     }
 
-    public Direction getTurnLane() {
+    private Direction getTurnLane() {
         switch (this.getDirection()){
             case NORTH:
                 this.turnLane = Direction.WEST;

@@ -9,25 +9,24 @@ public interface TrafficLight {
      *
      * @return
      */
-    public boolean isBlinking();
+    boolean isBlinking();
 
-    public Direction getDirection();
+    Direction getDirection();
 
-    public TrafficLightState getState();
-
-    /**
-     *
-     */
-    public void advanceState();
+    TrafficLightState getState();
 
     /**
      *
      */
+    void advanceState();
+
+    /**
+     *
+     */
 
 
+    void testLights();
 
-    public void testLights();
-
-    public TrafficLightState[] getStates();
+    TrafficLightState[] getStates();
 
 }

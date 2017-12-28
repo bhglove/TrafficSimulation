@@ -4,7 +4,7 @@ import com.example.trafficlight.enums.Direction;
 import com.example.trafficlight.enums.TrafficLightState;
 import com.example.trafficlight.interfaces.TrafficLight;
 
-public class StraightLight implements TrafficLight {
+class StraightLight implements TrafficLight {
 
     private Direction direction;
     private TrafficLightState state = TrafficLightState.RED;
